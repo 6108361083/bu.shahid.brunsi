@@ -3,123 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>بسیج دانشگاه - bu.shahid.brunsi</title>
+  <title>بسیج دانشجویی دانشگاه شهید برونسی</title>
   <style>
     body {
-      font-family: tahoma, sans-serif;
+      font-family: Tahoma, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f6f7;
       direction: rtl;
+      background: #f4f6f9;
+      color: #333;
     }
     header {
-      background: #2c3e50;
+      background: #0b6623;
       color: white;
       padding: 20px;
       text-align: center;
     }
     nav {
-      background: #34495e;
+      background: #084c1e;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
+      gap: 20px;
+      padding: 10px;
     }
     nav a {
       color: white;
       text-decoration: none;
-      padding: 14px 20px;
-      display: block;
+      font-weight: bold;
     }
     nav a:hover {
-      background: #2c3e50;
+      text-decoration: underline;
     }
-    .container {
+    main {
+      padding: 20px;
       max-width: 1000px;
       margin: auto;
-      padding: 20px;
     }
-    section {
-      margin-bottom: 30px;
+    .card {
       background: white;
+      margin: 15px 0;
       padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    h2 {
-      color: #2c3e50;
+    .card h2 {
+      margin-top: 0;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea, button {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+    button {
+      background: #0b6623;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #09531c;
     }
     footer {
       text-align: center;
-      padding: 15px;
-      background: #2c3e50;
+      background: #222;
       color: white;
+      padding: 15px;
       margin-top: 20px;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>بسیج دانشگاه</h1>
-    <p>وب‌سایت رسمی پایگاه بسیج دانشجویی - bu.shahid.brunsi</p>
+    <h1>بسیج دانشجویی دانشگاه شهید برونسی</h1>
   </header>
-
   <nav>
-    <a href="#news">گزارش‌ها و اخبار</a>
-    <a href="#announcements">اطلاعیه‌ها</a>
+    <a href="#">خانه</a>
+    <a href="#">گزارش‌ها</a>
+    <a href="#">اطلاعیه‌ها</a>
     <a href="#signup">ثبت‌نام</a>
     <a href="#contact">ارتباط با ما</a>
   </nav>
-
-  <div class="container">
-    <section id="news">
-      <h2>گزارش‌ها و اخبار</h2>
-      <p>اینجا گزارش‌ها و اخبار روز فعالیت‌های بسیج دانشگاه قرار می‌گیرد.</p>
-      <ul>
-        <li>گزارش اردوی جهادی تابستان ۱۴۰۴</li>
-        <li>برگزاری مراسم بزرگداشت شهدا</li>
-      </ul>
-    </section>
-
-    <section id="announcements">
+  <main>
+    <div class="card">
+      <h2>گزارش روز</h2>
+      <p>در این بخش گزارش‌های روزانه بسیج دانشجویی منتشر می‌شود.</p>
+    </div>
+    <div class="card">
       <h2>اطلاعیه‌ها</h2>
-      <ul>
-        <li>ثبت‌نام طرح صالحین آغاز شد.</li>
-        <li>جلسه توجیهی اعضای جدید هفته آینده برگزار می‌شود.</li>
-      </ul>
-    </section>
-
-    <section id="signup">
+      <p>آخرین اطلاعیه‌ها و اخبار در این بخش قرار خواهد گرفت.</p>
+    </div>
+    <div class="card" id="signup">
       <h2>ثبت‌نام</h2>
-      <p>برای عضویت در بسیج دانشجویی فرم زیر را تکمیل کنید:</p>
       <form>
-        <label>نام و نام خانوادگی:</label><br>
-        <input type="text" name="fullname" required><br><br>
-
-        <label>شماره دانشجویی:</label><br>
-        <input type="text" name="studentid" required><br><br>
-
-        <label>رشته تحصیلی:</label><br>
-        <input type="text" name="major"><br><br>
-
-        <label>ایمیل:</label><br>
-        <input type="email" name="email"><br><br>
-
+        <input type="text" placeholder="نام و نام خانوادگی" required>
+        <input type="text" placeholder="شماره تماس" required>
+        <input type="text" placeholder="رشته تحصیلی">
         <button type="submit">ارسال</button>
       </form>
-    </section>
-
-    <section id="contact">
+    </div>
+    <div class="card" id="contact">
       <h2>ارتباط با ما</h2>
-      <p>ایمیل: example@email.com</p>
-      <p>شماره تماس: ۰۹۱۲۳۴۵۶۷۸۹</p>
-      <p>آدرس: دانشگاه شهید برونسی، پایگاه بسیج دانشجویی</p>
-    </section>
-  </div>
-
+      <p>برای ارتباط با بسیج دانشجویی می‌توانید از طریق ایمیل و شبکه‌های اجتماعی اقدام کنید.</p>
+    </div>
+  </main>
   <footer>
-    <p>© ۱۴۰۴ بسیج دانشجویی دانشگاه - bu.shahid.brunsi</p>
+    <p>کلیه حقوق محفوظ است – بسیج دانشجویی دانشگاه شهید برونسی</p>
   </footer>
-
 </body>
 </html>
