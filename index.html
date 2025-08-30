@@ -3,171 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>بسیج دانشجویی نیشابور | حوزه شهید برونسی</title>
-  <style>
-    body {
-      font-family: Tahoma, sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    header {
-      text-align: center;
-      position: relative;
-      background: linear-gradient(to bottom, #ccc, #eee);
-      padding: 20px;
-      border-bottom: 3px solid #2e7d32;
-    }
-    header h1 {
-      margin: 10px 0 0;
-      font-size: 24px;
-      color: #2e7d32;
-    }
-    .bismillah {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #000;
-    }
-    .allah-logo {
-      width: 80px;
-      margin: 10px auto;
-      display: block;
-    }
-    .corner-image {
-      position: absolute;
-      top: 10px;
-      width: 90px;
-      border-radius: 15px;
-    }
-    .corner-image.left {
-      left: 10px;
-    }
-    .corner-image.right {
-      right: 10px;
-    }
-    nav {
-      float: right;
-      width: 200px;
-      background: #2e7d32;
-      color: white;
-      height: 100vh;
-      padding-top: 20px;
-    }
-    nav a {
-      display: block;
-      padding: 12px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      background: #1b5e20;
-    }
-    main {
-      margin-right: 220px;
-      padding: 20px;
-    }
-    section {
-      display: none;
-    }
-    section.active {
-      display: block;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 8px;
-      margin: 5px 0;
-      border-radius: 5px;
-      border: 1px solid #aaa;
-    }
-    form button {
-      background: #2e7d32;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background: #1b5e20;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header>
-    <div class="bismillah">بسم الله الرحمن الرحیم</div>
-    <img src="images/islamicrepublicofiranpng.parspng.com_.png" alt="نماد الله" class="allah-logo">
-    <img src="images/Imam-khameneipng.parspng.com-10.png" alt="رهبر انقلاب" class="corner-image left">
-    <img src="images/nody-مهر-رهبری-png-1635200735.png" alt="امام خمینی" class="corner-image right">
-    <h1>بسیج دانشجویی نیشابور | حوزه شهید برونسی</h1>
+    <div class="header-images">
+      <img src="assets/khamenei.png" alt="رهبر انقلاب" class="leader-img left">
+      <img src="assets/allah.png" alt="نماد الله" class="allah-icon">
+      <img src="assets/khomeini.png" alt="امام خمینی" class="leader-img right">
+    </div>
+    <h1>بسم الله الرحمن الرحیم</h1>
+    <h2>بسیج دانشجویی نیشابور | حوزه شهید برونسی</h2>
   </header>
 
   <nav>
-    <a href="#" onclick="showSection('home')">خانه</a>
-    <a href="#" onclick="showSection('reports')">گزارش‌ها</a>
-    <a href="#" onclick="showSection('notices')">اطلاعیه‌ها</a>
-    <a href="#" onclick="showSection('register')">ثبت‌نام</a>
-    <a href="#" onclick="showSection('contact')">ارتباط با ما</a>
+    <ul>
+      <li><a href="#">خانه</a></li>
+      <li><a href="#">گزارش‌ها</a></li>
+      <li><a href="#">اطلاعیه‌ها</a></li>
+      <li><a href="#">ثبت‌نام</a></li>
+      <li><a href="#">ارتباط با ما</a></li>
+    </ul>
   </nav>
 
   <main>
-    <section id="home" class="active">
-      <h2>خانه</h2>
-      <p>به سایت بسیج دانشجویی نیشابور، حوزه شهید برونسی خوش آمدید.</p>
-    </section>
-
-    <section id="reports">
-      <h2>گزارش‌ها</h2>
-      <p>اینجا گزارش‌های فعالیت‌ها قرار می‌گیرد.</p>
-    </section>
-
-    <section id="notices">
-      <h2>اطلاعیه‌ها</h2>
-      <p>آخرین اطلاعیه‌ها اینجا درج می‌شوند.</p>
-    </section>
-
-    <section id="register">
-      <h2>فرم ثبت‌نام</h2>
-      <form name="submit-to-google-sheet">
+    <section class="form-section">
+      <h3>فرم ثبت‌نام</h3>
+      <form action="https://script.google.com/macros/s/AKfycbxFcM_4oE9o_1T1_42rAtQYHrwKLFFZMmutM6ueWNE438Fpj3Ot6n2R1U7Q-cumdxv4/exec" method="post">
         <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
-        <input type="text" name="student_id" placeholder="شماره دانشجویی">
-        <input type="tel" name="phone" placeholder="شماره تماس">
+        <input type="text" name="code" placeholder="کد ملی" required>
+        <input type="text" name="phone" placeholder="شماره تماس" required>
+        <input type="text" name="reshte" placeholder="رشته تحصیلی" required>
         <button type="submit">ارسال</button>
       </form>
-      <p id="msg"></p>
-    </section>
-
-    <section id="contact">
-      <h2>ارتباط با ما</h2>
-      <p>📱 شماره: 09909951792</p>
-      <p>☎️ تلفن: 051-43305000</p>
-      <p>📢 تلگرام: <a href="https://t.me/paygah_pardis">@paygah_pardis</a></p>
     </section>
   </main>
 
-  <script>
-    function showSection(id) {
-      document.querySelectorAll("main section").forEach(s => s.classList.remove("active"));
-      document.getElementById(id).classList.add("active");
-    }
-
-    const scriptURL = "اینجا لینک اسکریپت گوگل شیت میاد";
-    const form = document.forms['submit-to-google-sheet'];
-    const msg = document.getElementById("msg");
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-          msg.innerHTML = "ثبت شد ✅";
-          setTimeout(() => msg.innerHTML = "", 3000);
-          form.reset();
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
+  <footer>
+    <p>به‌روز رسانی سایت / 8 / 6 / 1404</p>
+  </footer>
 </body>
 </html>
